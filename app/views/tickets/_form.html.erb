@@ -13,22 +13,21 @@
 
   <div class="field">
     <%= form.label :date %>
-    <%= form.datetime_select :date, id: :ticket_date %>
+    <%= form.date_select :date, id: :ticket_date %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price, id: :ticket_price %>
+    <%= form.number_field :price, id: :ticket_price, readonly: true, value: 20 %>
   </div>
 
   <div class="field">
     <%= form.label :quantity %>
-    <%= form.number_field :quantity, id: :ticket_quantity %>
+    <%= form.number_field :quantity, min: 1, id: :ticket_quantity %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :ticket_user_id %>
+    <%= form.hidden_field :user_id, id: :ticket_user_id %>
   </div>
 
   <div class="actions">

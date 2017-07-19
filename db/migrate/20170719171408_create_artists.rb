@@ -3,8 +3,8 @@ class CreateArtists < ActiveRecord::Migration[5.1]
     create_table :artists do |t|
       t.string :fname
       t.string :lname
-      t.datetime :birthdate
-      t.datetime :deathdate
+      t.date :birthdate
+      t.date :deathdate
       t.string :bio
       t.belongs_to :user, foreign_key: true
 

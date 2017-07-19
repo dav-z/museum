@@ -3,7 +3,7 @@ class CreateArts < ActiveRecord::Migration[5.1]
     create_table :arts do |t|
       t.string :title
       t.text :description
-      t.datetime :date
+      t.date :date
       t.string :type
       t.integer :value
       t.belongs_to :artist, foreign_key: true

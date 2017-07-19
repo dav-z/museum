@@ -5,22 +5,67 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "artists";
+@import "arts";
+@import "locations";
+@import "media";
+@import "profile";
+@import "scaffolds";
+@import "static";
+@import "tickets";
 
-nav ul {
-  list-style: none;
-  li {
-    display: inline-block;
+html {
+  background-color: firebrick;
+  body {
+    background-color: firebrick;
+    .abovenav {
+      background-color: red;
+      height: 20vh;
+    }
+    nav {
+      background-color: firebrick;
+      text-align: right;
+      height: 5vh;
+      ul {
+        list-style: none;
+        max-width: 80%;
+        li {
+          display: inline-block;
+          padding-left: 20px;
+        }
+      }
+    }
+    .yieldbody {
+      max-width: 80%;
+      margin: auto;
+      height: 72vh;
+      background-color: firebrick;
+    }
+    footer {
+      height: 3vh;
+      text-align: right;
+      background-color: brown;
+      .footertext {
+        padding-right: 50px;
+      }
+    }
   }
 }
+
 .homelogin {
   background-color: tan;
+  border: 10px outset goldenrod;
+  border-radius: 15px;
   /*margin: auto;*/
 }
 .homedisplay {
-  background-color: red;
+  background-color: tan;
+  border: 10px outset goldenrod;
+  border-radius: 15px;
   /*margin: auto;*/
 }
-.yieldbody {
-  max-width: 80%;
-  margin: auto;
+.profilebox {
+  background-color: tan;
+  border: 10px outset goldenrod;
+  border-radius: 15px;
 }
