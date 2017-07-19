@@ -9,16 +9,22 @@
   </head>
 
   <body>
+    <div class="abovenav">
+      <span class="notice"><%= notice %></span>
+      <span class="alert"><%= alert %></span>
+    </div>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="#">Visit</a></li>
         <li><a href="#">Exhibits</a></li>
+        <li><a href="/account">Account</a></li>
         <li><a href="#">About</a></li>
       </ul>
     </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="yieldbody">
+      <%= yield %>
+    </div>
+    <footer class="col-md-12"><span class="footertext">2017</span></footer>
   </body>
 </html>

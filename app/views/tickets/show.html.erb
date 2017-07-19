@@ -2,7 +2,7 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @ticket.date %>
+  <%= @ticket.date.strftime("%Y-%d-%m") %>
 </p>
 
 <p>
@@ -17,7 +17,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @ticket.user %>
+  <%= @ticket.user.fname %> <%= @ticket.user.lname %>
 </p>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %> |
