@@ -1,5 +1,18 @@
+/*
+*= require_tree
+*= require_self
+*/
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "artists";
+@import "arts";
+@import "locations";
+@import "media";
+@import "profile";
+@import "scaffolds";
+@import "static";
+@import "tickets";
 
 html {
   background-color: firebrick;
