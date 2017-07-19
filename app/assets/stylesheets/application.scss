@@ -1,0 +1,21 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+nav ul {
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+.homelogin {
+  background-color: tan;
+  /*margin: auto;*/
+}
+.homedisplay {
+  background-color: red;
+  /*margin: auto;*/
+}
+.yieldbody {
+  max-width: 80%;
+  margin: auto;
+}
