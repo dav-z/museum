@@ -21,9 +21,9 @@
 * Browse the current artwork on display
 
 rails g scaffold ticket date:datetime price:integer quantity:integer user:belongs_to
-rails g scaffold artist fname:string lname:string birthdate:datetime deathdate:datetime bio:string user:belongs_to
+rails g scaffold artist fname:string lname:string birthdate:date deathdate:date bio:string user:belongs_to
 rails g scaffold location wing:string storage:boolean
-rails g scaffold art title:string description:text date:datetime type:string value:integer artist:belongs_to user:belongs_to location:belongs_to
+rails g scaffold art title:string description:text date:date type:string value:integer artist:belongs_to user:belongs_to location:belongs_to
 rails g scaffold medium style:string
 
 rails g migration ArtMedium
