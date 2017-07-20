@@ -51,6 +51,13 @@
     <%= form.text_field :location_id, id: :art_location_id %>
   </div>
 
+  <div class="field">
+    <%= form.label "Image" %>
+    <%= form_for @art, url: arts_path, html: { multipart: true } do |form| %>
+    <%= form.file_field :avatar %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

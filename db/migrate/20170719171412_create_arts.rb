@@ -13,4 +13,13 @@ class CreateArts < ActiveRecord::Migration[5.1]
       t.timestamps
     end
   end
+
+  def up
+    add_attachment :arts, :avatar
+  end
+
+  def down
+    remove_attachment :arts, :avatar
+  end
+
 end
