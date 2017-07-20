@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :birthdate %>
-    <%= form.date_select :birthdate, id: :artist_birthdate %>
+    <%= form.date_select :birthdate, id: :artist_birthdate, :start_year => 1900, :end_year => Date.today.year %>
   </div>
 
   <div class="field">
     <%= form.label :deathdate %>
-    <%= form.date_select :deathdate, id: :artist_deathdate %>
+    <%= form.date_select :deathdate, id: :artist_deathdate, :include_blank => true, :default => nil, :start_year => 1900, :end_year => Date.today.year %>
   </div>
 
   <div class="field">
@@ -45,7 +45,7 @@
     <%= form.label "Profile Picture" %>
 
     <%= form.file_field :avatar %>
-  
+
   </div>
 
   <div class="actions">
