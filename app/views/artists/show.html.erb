@@ -3,7 +3,7 @@
 <div class="profilebox col-md-4">
   <center>
   <%= image_tag @artist.avatar.url(:medium), class: 'artistpic' %>
-  <h3><strong><%= @artist.fname %> <%= @artist.lname %></strong></h3>
+  <h3><strong><%= @artist.full_name %></strong></h3>
 
   <p><em><%= @artist.birthdate %> — <%= @artist.deathdate %></em></p>
 
