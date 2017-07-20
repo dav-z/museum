@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20170719171426) do
   create_table "artists", force: :cascade do |t|
     t.string "fname"
     t.string "lname"
-    t.datetime "birthdate"
-    t.datetime "deathdate"
+    t.date "birthdate"
+    t.date "deathdate"
     t.string "bio"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20170719171426) do
   create_table "arts", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.datetime "date"
+    t.date "date"
     t.string "type"
     t.integer "value"
     t.integer "artist_id"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20170719171426) do
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.datetime "date"
+    t.date "date"
     t.integer "price"
     t.integer "quantity"
     t.integer "user_id"
