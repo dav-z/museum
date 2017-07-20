@@ -25,6 +25,7 @@ class ArtsController < ApplicationController
   # POST /arts.json
   def create
     @art = Art.new(art_params)
+    @artist.user_id = current_user.id
     respond_to do |format|
       if @art.save
         format.html { redirect_to @art, notice: 'Art was successfully created.' }
@@ -39,8 +40,14 @@ class ArtsController < ApplicationController
   # PATCH/PUT /arts/1
   # PATCH/PUT /arts/1.json
   def update
+    @artist.user_id = current_user.id
     respond_to do |format|
-      if @art.update(art_params)
+      # if @art.update(art_params)
+      @art.update_attributes(art_params)
+      if params[:artwork][:medium_ids]
+        @art.media = medium.where( id: params[:artwork][:medium_ids] )
+      end
+      if @art.save
         format.html { redirect_to @art, notice: 'Art was successfully updated.' }
         format.json { render :show, status: :ok, location: @art }
       else
@@ -68,6 +75,6 @@ class ArtsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def art_params
-      params.require(:art).permit(:title, :description, :date, :type, :value, :artist_id, :user_id, :location_id, :avatar, :medium)
+      params.require(:art).permit(:title, :description, :date, :type, :value, :artist_id, :user_id, :location_id, :avatar, :medium_ids)
     end
 end

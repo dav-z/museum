@@ -38,23 +38,24 @@
 
   <div class="field">
     <%= form.label :artist_id %>
-    <%= form.text_field :artist_id, id: :art_artist_id %>
+    <%= form.select :artist_id, Artist.all.collect { |a| [a.full_name, a.id] }, include_blank: false %>
   </div>
 
-  <div class="field">
+  <!-- <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id, id: :art_user_id %>
-  </div>
+  </div> -->
 
   <div class="field">
     <%= form.label :location_id %>
-    <%= form.text_field :location_id, id: :art_location_id %>
+    <%= form.select :location_id, Location.all.collect { |l| [l.wing, l.id] }, include_blank: false %>
   </div>
 
   <div class="field">
     <%= form.label 'Medium' %>
-    <%= Medium.all.each do |medium| %>
-      <%= form.check_box :medium_id, id: :art_medium_id %>
+    <% Medium.all.each do |medium| %>
+      <%= form.check_box :medium_ids, {multiple: true}, medium.id, nil %>
+      <%= form.label medium.style, class: 'mediumstyles' %>
     <% end %>
   </div>
 

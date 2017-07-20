@@ -20,8 +20,9 @@ html {
     background-color: firebrick;
     margin: 0;
     .abovenav {
-      background-color: red;
-      min-height: 20vh;
+      background-color: firebrick;
+      min-height: 19vh;
+      border-bottom: 2px black solid;
       a:hover {
         text-decoration: none;
       }
@@ -99,4 +100,8 @@ html {
 }
 .artistpic {
   margin: 1vh;
+}
+.mediumstyles {
+  display: inline-block;
+  font-weight: normal;
 }
