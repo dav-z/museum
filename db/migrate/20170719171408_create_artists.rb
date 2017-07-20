@@ -7,17 +7,10 @@ class CreateArtists < ActiveRecord::Migration[5.1]
       t.date :deathdate
       t.string :bio
       t.belongs_to :user, foreign_key: true
+      t.attachment :avatar
 
       t.timestamps
     end
-  end
-
-  def up
-    add_attachment :artists, :avatar
-  end
-
-  def down
-    remove_attachment :artists, :avatar
   end
 
 end
