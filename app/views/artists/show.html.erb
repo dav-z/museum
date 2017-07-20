@@ -26,9 +26,11 @@
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Last Edited By:</strong>
   <%= @artist.user %>
 </p>
+
+<%= image_tag @artist.avatar.url(:medium) %><br>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
