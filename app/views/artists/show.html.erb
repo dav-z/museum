@@ -1,36 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fname:</strong>
-  <%= @artist.fname %>
-</p>
+<div class="profilebox col-md-4">
+  <center>
+  <%= image_tag @artist.avatar.url(:medium), class: 'artistpic' %>
+  <h3><strong><%= @artist.fname %> <%= @artist.lname %></strong></h3>
 
-<p>
-  <strong>Lname:</strong>
-  <%= @artist.lname %>
-</p>
+  <p><em><%= @artist.birthdate %> — <%= @artist.deathdate %></em></p>
 
-<p>
-  <strong>Birthdate:</strong>
-  <%= @artist.birthdate %>
-</p>
+  <p><%= @artist.bio %></p>
+  <% if user_signed_in? && current_user.admin? %>
+  <p>
+    <strong>Last Edited By:</strong>
+    <%= @artist.user.fname %> <%= @artist.user.lname %>
+  </p>
 
-<p>
-  <strong>Deathdate:</strong>
-  <%= @artist.deathdate %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @artist.bio %>
-</p>
-
-<p>
-  <strong>Last Edited By:</strong>
-  <%= @artist.user %>
-</p>
-
-<%= image_tag @artist.avatar.url(:medium) %><br>
-
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+  <%= link_to 'Edit', edit_artist_path(@artist) %>
+  <% else %>
+  <% end %>
+  </center>
+</div>
