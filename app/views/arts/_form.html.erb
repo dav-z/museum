@@ -52,6 +52,13 @@
   </div>
 
   <div class="field">
+    <%= form.label 'Medium' %>
+    <%= Medium.all.each do |medium| %>
+      <%= form.check_box :medium_id, id: :art_medium_id %>
+    <% end %>
+  </div>
+
+  <div class="field">
     <%= form.label "Image" %>
     <%= form.file_field :avatar %>
   </div>
