@@ -22,6 +22,27 @@ html {
     .abovenav {
       background-color: red;
       height: 20vh;
+      a:hover {
+        text-decoration: none;
+      }
+      .logoish {
+        width: 8%;
+        margin-left: 15%;
+        p {
+          font-size: 5vh;
+          color: goldenrod;
+          margin-bottom: 0;
+          padding-top: 2vh;
+          display: inline-block;
+          font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+        }
+        span {
+          font-size: 2vh;
+          margin-bottom: 0;
+          color: tan;
+          font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+        }
+      }
     }
     nav {
       background-color: firebrick;
@@ -58,6 +79,9 @@ html {
   border: 10px outset goldenrod;
   border-radius: 15px;
   /*margin: auto;*/
+  input {
+    max-width: 100%;
+  }
 }
 .homedisplay {
   background-color: tan;

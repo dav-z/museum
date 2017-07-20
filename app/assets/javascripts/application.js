@@ -12,4 +12,17 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery3
 //= require_tree .
+document.addEventListener("DOMContentLoaded",function(){
+  $('.hovershow').hide();
+
+  $('.logoish').hover(
+    function(){
+      $('.hovershow').slideDown(500);
+    },
+    function(){
+      $('.hovershow').slideUp(200);
+    }
+  )
+})
