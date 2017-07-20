@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :birthdate %>
-    <%= form.datetime_select :birthdate, id: :artist_birthdate %>
+    <%= form.date_select :birthdate, id: :artist_birthdate %>
   </div>
 
   <div class="field">
     <%= form.label :deathdate %>
-    <%= form.datetime_select :deathdate, id: :artist_deathdate %>
+    <%= form.date_select :deathdate, id: :artist_deathdate %>
   </div>
 
   <div class="field">
@@ -36,9 +36,16 @@
     <%= form.text_field :bio, id: :artist_bio %>
   </div>
 
-  <div class="field">
+  <!-- <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :artist_user_id %>
+    <%= form.hidden_field :user_id, id: :artist_user_id %>
+  </div> -->
+
+  <div class="field">
+    <%= form.label "Profile Picture" %>
+    <%= form_for @artist, url: artists_path, html: { multipart: true } do |form| %>
+    <%= form.file_field :avatar %>
+    <% end %>
   </div>
 
   <div class="actions">
