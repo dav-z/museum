@@ -23,9 +23,9 @@
         <td><%= art.description %></td>
         <td><%= art.date %></td>
         <td><%= art.value %></td>
-        <td><%= art.artist %></td>
-        <td><%= art.user %></td>
-        <td><%= art.location %></td>
+        <td><%= art.artist.full_name %></td>
+        <td><%= art.user.full_name %></td>
+        <td><%= art.location.wing %></td>
         <td><%= link_to 'Show', art %></td>
         <td><%= link_to 'Edit', edit_art_path(art) %></td>
         <td><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></td>

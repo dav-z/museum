@@ -45,8 +45,8 @@ class ArtsController < ApplicationController
       # if @art.update(art_params)
       # used for the media join table to update the arts with a checkbox option for multiple media
       @art.update_attributes(art_params)
-      if params[:artwork][:medium_ids]
-        @art.media = medium.where( id: params[:artwork][:medium_ids] )
+      if params[:art][:medium_ids]
+        @art.media = medium.where( id: params[:art][:medium_ids] )
       end
       if @art.save
         format.html { redirect_to @art, notice: 'Art was successfully updated.' }
