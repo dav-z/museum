@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price, id: :ticket_price, readonly: true, value: 20 %>
+    $<%= form.number_field :price, id: :ticket_price, readonly: true, value: 20 %>
   </div>
 
   <div class="field">
     <%= form.label :quantity %>
-    <%= form.number_field :quantity, min: 1, id: :ticket_quantity %>
+    <%= form.select :quantity, (1..4), id: :ticket_quantity %>
   </div>
 
   <div class="field">

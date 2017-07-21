@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20170719171426) do
     t.string "title"
     t.text "description"
     t.date "date"
-    t.string "type"
     t.integer "value"
     t.integer "artist_id"
     t.integer "user_id"
@@ -59,7 +58,7 @@ ActiveRecord::Schema.define(version: 20170719171426) do
 
   create_table "locations", force: :cascade do |t|
     t.string "wing"
-    t.boolean "storage"
+    t.boolean "storage", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

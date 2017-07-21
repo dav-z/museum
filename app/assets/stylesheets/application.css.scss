@@ -14,14 +14,16 @@
 @import "static";
 @import "tickets";
 
+
 html {
+  // this thread will be for the general layout of the page
   background-color: firebrick;
   body {
-    background-color: firebrick;
+    background-color: sienna;
     margin: 0;
     .abovenav {
-      background-color: firebrick;
-      min-height: 19vh;
+      background-color: darkred;
+      min-height: 20vh;
       border-bottom: 2px black solid;
       a:hover {
         text-decoration: none;
@@ -46,7 +48,7 @@ html {
       }
     }
     nav {
-      background-color: firebrick;
+      background-color: sienna;
       text-align: right;
       min-height: 5vh;
       ul {
@@ -62,7 +64,7 @@ html {
       max-width: 80%;
       margin: auto;
       min-height: 72vh;
-      background-color: firebrick;
+      background-color: sienna;
     }
     footer {
       min-height: 3vh;
@@ -75,11 +77,10 @@ html {
   }
 }
 
+// more personalized sections of pages
 .homelogin {
   background-color: tan;
   border: 10px outset goldenrod;
-  border-radius: 15px;
-  /*margin: auto;*/
   input {
     max-width: 100%;
   }
@@ -88,7 +89,6 @@ html {
   background-color: tan;
   border: 10px outset goldenrod;
   border-radius: 15px;
-  /*margin: auto;*/
 }
 .profilebox {
   background-color: tan;

@@ -32,6 +32,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
 
       t.string :fname
       t.string :lname
+      # gives admin field to seeded users while new ones are not admins
       t.boolean :admin, default: false
 
       t.timestamps null: false
