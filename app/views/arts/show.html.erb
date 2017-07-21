@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<!-- show the artist bio box on the left side of the page -->
 <div class="profilebox col-md-4">
   <center>
   <%= image_tag @art.artist.avatar.url(:medium), class: 'artistpic' %>
@@ -10,7 +10,7 @@
   <p><%= @art.artist.bio %></p>
   </center>
 </div>
-
+<!-- show the art piece and info on the right side of the page -->
 <div class="col-md-7 col-md-offset-1 homedisplay">
   <center>
     <%= image_tag @art.avatar.url(:medium), class: 'artpic' %>
