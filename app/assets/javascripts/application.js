@@ -10,12 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require turbolinks
 //= require rails-ujs
-//= require jquery3
 //= require_tree .
 
-document.addEventListener("turbolinks:load",function(){
+document.addEventListener("DOMContentLoaded",function(){
   $('.hovershow').hide();
 
   $('.logoish').hover(
@@ -26,4 +24,38 @@ document.addEventListener("turbolinks:load",function(){
       $('.hovershow').slideUp(200);
     }
   )
+
+  // $('#carouse_About').hide();
+  $('#div_By').hide();
+  $('#div_For').hide();
+  $('#div_Storage').hide();
+
+
+  $('#cara1').click(
+    function(){
+      $('#div_About').show();
+      $('#div_By').hide();
+      $('#div_For').hide();
+      $('#div_Storage').hide();
+    }
+  )
+  $('#cara2').click(
+    function(){
+      $('#div_About').hide();
+      $('#div_By').show();
+      $('#div_For').hide();
+      $('#div_Storage').hide();
+    }
+  )
+  $('#cara3').click(
+    function(){
+      $('#div_About').hide();
+      $('#div_By').hide();
+      $('#div_For').show();
+      $('#div_Storage').hide();
+    }
+  )
+
+
+
 })
