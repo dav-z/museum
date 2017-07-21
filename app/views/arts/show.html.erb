@@ -1,44 +1,54 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @art.title %>
-</p>
+<div class="profilebox col-md-4">
+  <center>
+  <%= image_tag @art.artist.avatar.url(:medium), class: 'artistpic' %>
+  <h3><strong><a href="/artists/<%= @art.artist.id %>"><%= @art.artist.full_name %></a></strong></h3>
 
-<p>
-  <strong>Description:</strong>
-  <%= @art.description %>
-</p>
+  <p><em><%= @art.artist.birthdate %> — <%= @art.artist.deathdate %></em></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @art.date %>
-</p>
+  <p><%= @art.artist.bio %></p>
+  </center>
+</div>
 
-<p>
-  <strong>Type:</strong>
-  <%= @art.type %>
-</p>
+<div class="col-md-7 col-md-offset-1 homedisplay">
+  <center>
+    <%= image_tag @art.avatar.url(:medium), class: 'artpic' %>
+    <p>
+      <strong>Title:</strong>
+      <%= @art.title %>
+    </p>
 
-<p>
-  <strong>Value:</strong>
-  <%= @art.value %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @art.description %>
+    </p>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @art.artist %>
-</p>
+    <p>
+      <strong>Date:</strong>
+      <%= @art.date %>
+    </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @art.user %>
-</p>
+    <p>
+      <strong>Value:</strong>
+      $<%= @art.value %>
+    </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @art.location %>
-</p>
+    <p>
+      <strong>Artist:</strong>
+      <%= @art.artist.full_name %>
+    </p>
 
-<%= link_to 'Edit', edit_art_path(@art) %> |
-<%= link_to 'Back', arts_path %>
+    <p>
+      <strong>Last Edited By:</strong>
+      <%= @art.user.full_name %>
+    </p>
+
+    <p>
+      <strong>Location:</strong>
+      <%= @art.location.wing %>
+    </p>
+
+    <%= link_to 'Edit', edit_art_path(@art) %>
+  </center>
+</div>
