@@ -1,0 +1,26 @@
+<div class="col-md-2 homelogin">
+  <% if user_signed_in? %>
+    <p>Welcome, <%= current_user.fname %></p>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= render file: "devise/sessions/new" %>
+  <% end %>
+</div>
+<div class="col-md-7 col-md-offset-1 homedisplay">
+  <div class="exhibit">
+    <div class="carouseltext">
+      <center>
+      <span id="cara1">About Dads</span> | <span id="cara2">By Dads</span> | <span id="cara3">For Dads</span>
+    </center>
+    </div>
+  <% @locations.each do |location| %>
+    <div class="galdiv" id="div_<%= location.wing %>">
+      <% location.arts.each do |art| %>
+        <div class="galimg">
+          <%= image_tag art.avatar.url %>
+        </div>
+      <% end %>
+      </div>
+  <% end %>
+    </div>
+  </div>

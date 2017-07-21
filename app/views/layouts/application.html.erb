@@ -3,7 +3,9 @@
   <head>
     <title>DAM!</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -23,10 +25,10 @@
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="#">Visit</a></li>
-        <li><a href="#">Exhibits</a></li>
+        <li><a href="/tickets/new">Visit</a></li>
+        <li><a href="/exhibits">Exhibits</a></li>
         <li><a href="/account">Account</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="/about ">About</a></li>
       </ul>
     </nav>
     <div class="yieldbody">
