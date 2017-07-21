@@ -25,7 +25,7 @@ class ArtsController < ApplicationController
   # POST /arts.json
   def create
     @art = Art.new(art_params)
-    @artist.user_id = current_user.id
+    @art.user_id = current_user.id
     respond_to do |format|
       if @art.save
         format.html { redirect_to @art, notice: 'Art was successfully created.' }
@@ -40,7 +40,7 @@ class ArtsController < ApplicationController
   # PATCH/PUT /arts/1
   # PATCH/PUT /arts/1.json
   def update
-    @artist.user_id = current_user.id
+    @art.user_id = current_user.id
     respond_to do |format|
       # if @art.update(art_params)
       @art.update_attributes(art_params)
