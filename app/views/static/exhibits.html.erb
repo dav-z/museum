@@ -17,7 +17,7 @@
     <div class="galdiv" id="div_<%= location.wing %>">
       <% location.arts.each do |art| %>
         <div class="galimg">
-          <%= image_tag art.avatar.url %>
+          <a href="/arts/<%= art.id %>"><%= image_tag art.avatar.url %></a>
         </div>
       <% end %>
       </div>
