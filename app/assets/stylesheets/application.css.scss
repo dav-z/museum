@@ -76,12 +76,13 @@ html {
       max-width: 80%;
       margin: auto;
       min-height: 72vh;
-      background-color: sienna;
+      // background-color: sienna;
     }
     footer {
       min-height: 3vh;
       text-align: right;
       background-color: brown;
+      position: fixed;
       .footertext {
         padding-right: 50px;
       }
@@ -98,7 +99,7 @@ html {
   }
 }
 .homedisplay {
-  background-color: tan;
+  background-color: rgba(210,180,140,0.5);
   border: 10px outset goldenrod;
   border-radius: 15px;
   height: 60vh;
@@ -140,4 +141,9 @@ form div {
 #cara1:hover, #cara2:hover, #cara3:hover {
   color: firebrick;
   cursor: pointer;
+}
+.homething {
+  background-image: url('http://pixel.nymag.com/imgs/daily/intelligencer/2016/06/10/10-daddy-necklace.w710.h473.2x.jpg');
+  background-size: cover;
+  background-position: center;
 }
