@@ -1,4 +1,8 @@
 <div class="profilebox col-md-4">
+  <% if user_signed_in? %>
   <h1>New Ticket</h1>
   <%= render 'form', ticket: @ticket %>
+  <% else %>
+  <a href="/users/sign_in">Please Sign In To Purchase Tickets.</a>
+  <% end %>
 </div>

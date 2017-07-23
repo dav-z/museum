@@ -134,3 +134,10 @@ html {
 form div {
   margin: 5px;
 }
+#cara1, #cara2, #cara3 {
+  font-size: 20px;
+}
+#cara1:hover, #cara2:hover, #cara3:hover {
+  color: firebrick;
+  cursor: pointer;
+}
