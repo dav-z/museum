@@ -1,11 +1,11 @@
-<div class="col-md-2 homelogin">
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
+  <div class="col-md-2 homelogin">
     <p>Welcome, <%= current_user.fname %></p>
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-  <% else %>
+  </div>
+<% else %>
     <%= render file: "devise/sessions/new" %>
-  <% end %>
-</div>
+<% end %>
 <!-- <div class="col-md-7 col-md-offset-1 homedisplay">
 
 </div> -->
