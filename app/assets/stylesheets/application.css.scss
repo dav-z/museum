@@ -59,6 +59,7 @@ html {
           padding-left: 20px;
           color: darkred;
           a {
+            text-align: center;
             color: darkred;
           }
           a:hover {
@@ -154,10 +155,10 @@ form div {
 }
 .abouttext {
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 30px;
   text-align: center;
-  padding-top: 40px;
+  // padding-top: 40px;
 }
 .ticketdisplay, .aboutdisplay {
   background-color: rgba(210,180,140,0.5);
