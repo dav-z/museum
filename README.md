@@ -10,6 +10,10 @@
 
 * Use bcrypt gem to encrypt passwords
 
+* Incorporated UJS to the delete artists/arts function to reload information without refreshing page
+
+* Used regex for phone number validation
+
 ## About Project
 
 * Museum website
@@ -20,6 +24,9 @@
 
 * Browse the current artwork on display
 
+## Terminal Startup
+
+````
 rails g scaffold ticket date:datetime price:integer quantity:integer user:belongs_to
 rails g scaffold artist fname:string lname:string birthdate:date deathdate:date bio:string user:belongs_to
 rails g scaffold location wing:string storage:boolean
@@ -27,3 +34,4 @@ rails g scaffold art title:string description:text date:date type:string value:i
 rails g scaffold medium style:string
 
 rails g migration ArtMedium
+````

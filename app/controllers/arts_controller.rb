@@ -17,6 +17,11 @@ class ArtsController < ApplicationController
     @art = Art.new
   end
 
+  # for listing artwork from newest to oldest
+  def self.recent
+    self.order( id: :desc ).limit( num )
+  end
+
   # GET /arts/1/edit
   def edit
   end
@@ -25,6 +30,7 @@ class ArtsController < ApplicationController
   # POST /arts.json
   def create
     @art = Art.new(art_params)
+    # assigns a last edited by field for each artwork
     @art.user_id = current_user.id
     respond_to do |format|
       if @art.save

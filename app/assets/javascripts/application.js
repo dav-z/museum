@@ -16,6 +16,7 @@
 document.addEventListener("DOMContentLoaded",function(){
   $('.hovershow').hide();
 
+  // hover effect for the logo link
   $('.logoish').hover(
     function(){
       $('.hovershow').slideDown(500);
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded",function(){
   $('#div_For').hide();
   $('#div_Storage').hide();
 
-
+  // will show the exhibit that is clicked on but not anything else
   $('#cara1').click(
     function(){
       $('#div_About').show();
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded",function(){
     }
   )
 
+  // uses ujs to delete art and artists without reloading page
   $(document).ready(function(){
     $(".delete-arts").on("ajax:complete", function(e){
       $(e.currentTarget).parent().parent().hide()
