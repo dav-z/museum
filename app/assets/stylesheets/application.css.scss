@@ -76,6 +76,7 @@ html {
       max-width: 80%;
       margin: auto;
       min-height: 72vh;
+      padding-top: 45px;
       // background-color: sienna;
     }
     footer {
@@ -94,7 +95,7 @@ html {
 .homelogin {
   background-color: tan;
   border: 10px outset goldenrod;
-  margin-top: 100px;
+  margin-top: 60px;
   input {
     max-width: 100%;
   }
@@ -161,6 +162,7 @@ form div {
   border-radius: 15px;
   height: 30vh;
   max-height: 30vh;
+  margin-top: 100px;
   overflow-y: scroll;
 }
 .ticketdiv {
