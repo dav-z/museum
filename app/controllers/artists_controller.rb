@@ -25,8 +25,8 @@ class ArtistsController < ApplicationController
   # POST /artists.json
   def create
     @artist = Artist.new(artist_params)
+    # assigns an edited by field to the last user who edited
     @artist.user_id = current_user.id
-
     respond_to do |format|
       if @artist.save
         format.html { redirect_to @artist, notice: 'Artist was successfully created.' }
@@ -56,6 +56,7 @@ class ArtistsController < ApplicationController
   # DELETE /artists/1
   # DELETE /artists/1.json
   def destroy
+    # delete all artworks by an artist before deleting the artist page
     @artist.arts.destroy_all
     @artist.destroy
     respond_to do |format|
