@@ -14,41 +14,19 @@
 <div class="col-md-7 col-md-offset-1 homedisplay">
   <center>
     <%= image_tag @art.avatar.url(:medium), class: 'artpic' %>
-    <p>
-      <strong>Title:</strong>
-      <%= @art.title %>
-    </p>
 
-    <p>
-      <strong>Description:</strong>
-      <%= @art.description %>
-    </p>
+      <h3><strong><%= @art.title %></strong></h3>
+      <p><%= @art.artist.full_name %> — <em><%= @art.date %></em></p>
+      <p><%= @art.description %></p>
+    <p><strong>Location:</strong>
+      <%= @art.location.wing %></p>
+<% if user_signed_in? && current_user.admin? %>
 
-    <p>
-      <strong>Date:</strong>
-      <%= @art.date %>
-    </p>
+  <p><strong>Last Edited By:</strong>
+  <%= @art.user.full_name %></p>
 
-    <p>
-      <strong>Value:</strong>
-      $<%= @art.value %>
-    </p>
-
-    <p>
-      <strong>Artist:</strong>
-      <%= @art.artist.full_name %>
-    </p>
-
-    <p>
-      <strong>Last Edited By:</strong>
-      <%= @art.user.full_name %>
-    </p>
-
-    <p>
-      <strong>Location:</strong>
-      <%= @art.location.wing %>
-    </p>
-
-    <%= link_to 'Edit', edit_art_path(@art) %>
+  <%= link_to 'Edit', edit_art_path(@art) %>
+<% else %>
+<% end %>
   </center>
 </div>

@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Style:</strong>
-  <%= @medium.style %>
-</p>
+<div class="col-md-8 profilebox">
 
-<%= link_to 'Edit', edit_medium_path(@medium) %> |
-<%= link_to 'Back', media_path %>
+  <p>
+    <strong>Style:</strong>
+    <%= @medium.style %>
+  </p>
+
+  <%= link_to 'Edit', edit_medium_path(@medium) %> |
+  <%= link_to 'Back', media_path %>
+</div>
