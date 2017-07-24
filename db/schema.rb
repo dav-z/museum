@@ -12,13 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20170719171426) do
 
-  create_table "art_medium", id: false, force: :cascade do |t|
+  create_table "art_media", id: false, force: :cascade do |t|
     t.integer "art_id"
     t.integer "medium_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["art_id"], name: "index_art_medium_on_art_id"
-    t.index ["medium_id"], name: "index_art_medium_on_medium_id"
+    t.index ["art_id"], name: "index_art_media_on_art_id"
+    t.index ["medium_id"], name: "index_art_media_on_medium_id"
   end
 
   create_table "artists", force: :cascade do |t|

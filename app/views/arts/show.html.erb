@@ -18,6 +18,10 @@
       <h3><strong><%= @art.title %></strong></h3>
       <p><%= @art.artist.full_name %> — <em><%= @art.date %></em></p>
       <p><%= @art.description %></p>
+      <p><strong>Media:</strong>
+      <% @art.media.each do |medium| %>
+      <span><%= medium.style %> | </span>
+      <% end %></p>
     <p><strong>Location:</strong>
       <%= @art.location.wing %></p>
 <% if user_signed_in? && current_user.admin? %>
