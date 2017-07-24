@@ -94,7 +94,7 @@ html {
 .homelogin {
   background-color: tan;
   border: 10px outset goldenrod;
-  margin-top: 100px;
+  margin-top: 80px;
   input {
     max-width: 100%;
   }
@@ -111,6 +111,7 @@ html {
   background-color: tan;
   border: 10px outset goldenrod;
   border-radius: 15px;
+  min-height: 5vh;
   h3 {
     margin: 0;
   }
@@ -189,4 +190,13 @@ a {
 a:hover {
   text-decoration: none;
   color: goldenrod;
+}
+#error_explanation {
+  h2 {
+    display: none;
+  }
+  li {
+    font-size: 10px;
+  }
+
 }
