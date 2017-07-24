@@ -64,8 +64,6 @@
 
 
 <% else %>
-<div class="col-md-4 profilebox">
-  <a href="/users/sign_in">Please Sign In</a>
-</div>
+  <%= render file: "devise/sessions/new" %>
 
 <% end %>

@@ -92,7 +92,7 @@ html {
 
 // more personalized sections of pages
 .homelogin {
-  background-color: tan;
+  background-color: rgba(210,180,140,0.5);
   border: 10px outset goldenrod;
   margin-top: 80px;
   input {
@@ -108,7 +108,7 @@ html {
   overflow-y: scroll;
 }
 .profilebox {
-  background-color: tan;
+  background-color: rgba(210,180,140,0.5);
   border: 10px outset goldenrod;
   border-radius: 15px;
   min-height: 5vh;

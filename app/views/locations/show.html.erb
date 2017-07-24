@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Wing:</strong>
-  <%= @location.wing %>
-</p>
+<div class="col-md-8 profilebox">
 
-<p>
-  <strong>Storage:</strong>
-  <%= @location.storage %>
-</p>
+  <p>
+    <strong>Wing:</strong>
+    <%= @location.wing %>
+  </p>
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+  <p>
+    <strong>Storage:</strong>
+    <%= @location.storage %>
+  </p>
+
+  <%= link_to 'Edit', edit_location_path(@location) %> |
+  <%= link_to 'Back', locations_path %>
+</div>
