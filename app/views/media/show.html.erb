@@ -1,3 +1,4 @@
+<% if user_signed_in? && current_user.admin? %>
 <p id="notice"><%= notice %></p>
 
 <div class="col-md-8 profilebox">
@@ -10,3 +11,5 @@
   <%= link_to 'Edit', edit_medium_path(@medium) %> |
   <%= link_to 'Back', media_path %>
 </div>
+<% else %>
+<% end %>

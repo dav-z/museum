@@ -1,3 +1,4 @@
+<% if user_signed_in? && current_user.admin? %>
 <div class="col-md-8 profilebox">
 
   <h1>Editing Artist</h1>
@@ -7,3 +8,5 @@
   <%= link_to 'Show', @artist %> |
   <%= link_to 'Back', artists_path %>
 </div>
+<% else %>
+<% end %>

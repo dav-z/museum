@@ -1,3 +1,4 @@
+<% if user_signed_in? && current_user.admin? %>
 <p id="notice"><%= notice %></p>
 
 <div class="col-md-8 profilebox">
@@ -15,3 +16,5 @@
   <%= link_to 'Edit', edit_location_path(@location) %> |
   <%= link_to 'Back', locations_path %>
 </div>
+<% else %>
+<% end %>
