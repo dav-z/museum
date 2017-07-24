@@ -137,8 +137,12 @@ html {
 form div {
   margin: 5px;
 }
+.carouseltext {
+  margin: 10px;
+}
 #cara1, #cara2, #cara3 {
   font-size: 20px;
+  margin: 10px;
 }
 #cara1:hover, #cara2:hover, #cara3:hover {
   color: firebrick;
@@ -154,9 +158,9 @@ form div {
   font-size: 25px;
   line-height: 30px;
   text-align: center;
-  padding-top: 70px
+  padding-top: 40px;
 }
-.ticketdisplay {
+.ticketdisplay, .aboutdisplay {
   background-color: rgba(210,180,140,0.5);
   border: 10px outset goldenrod;
   border-radius: 15px;
@@ -172,4 +176,19 @@ form div {
   	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
   	color: goldenrod;
   }
+}
+th {
+	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+	padding: 11px;
+}
+td {
+	font-size: 15px;
+  padding: 5px 11px;
+}
+a {
+  color: darkred;
+}
+a:hover {
+  text-decoration: none;
+  color: goldenrod;
 }

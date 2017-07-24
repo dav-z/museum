@@ -8,6 +8,8 @@
         <li><%= link_to "Locations", locations_path %></li>
         <li><%= link_to "Mediums", media_path %></li>
       </ul>
+
+      <p><a href="/users/edit">Edit Account</a></p>
     </div>
 
     <div class="col-md-7 col-md-offset-1 ticketdisplay">
@@ -44,6 +46,7 @@
 <% elsif user_signed_in? %>
 <div class="col-md-4 profilebox">
   <h1><%= current_user.fname %> <%= current_user.lname %></h1>
+  <p><a href="/users/edit">Edit Account</a></p>
 </div>
 
 <div class="col-md-7 col-md-offset-1 homedisplay">
