@@ -56,6 +56,16 @@ document.addEventListener("DOMContentLoaded",function(){
     }
   )
 
+  $(document).ready(function(){
+    $(".delete-arts").on("ajax:complete", function(e){
+      $(e.currentTarget).parent().parent().hide()
+    })
+  })
 
+  $(document).ready(function(){
+    $(".delete-artists").on("ajax:complete", function(e){
+      $(e.currentTarget).parent().parent().hide()
+    })
+  })
 
 })
