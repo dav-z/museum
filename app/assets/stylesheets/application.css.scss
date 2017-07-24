@@ -50,7 +50,7 @@ html {
     nav {
       background-color: sienna;
       text-align: right;
-      min-height: 5vh;
+      min-height: 3vh;
       ul {
         list-style: none;
         max-width: 80%;
@@ -76,7 +76,7 @@ html {
     .yieldbody {
       max-width: 80%;
       margin: auto;
-      min-height: 72vh;
+      min-height: 74vh;
       // background-color: sienna;
     }
     footer {
@@ -167,7 +167,6 @@ form div {
   border-radius: 15px;
   height: 30vh;
   max-height: 30vh;
-  // margin-top: 100px;
   overflow-y: scroll;
 }
 .ticketdiv {
