@@ -1,8 +1,13 @@
-<div class="profilebox col-md-4">
-  <% if user_signed_in? %>
-  <h1>New Ticket</h1>
-  <%= render 'form', ticket: @ticket %>
-  <% else %>
-  <a href="/users/sign_in">Please Sign In To Purchase Tickets.</a>
-  <% end %>
+<% if user_signed_in? %>
+  <div class="col-md-2 homelogin">
+    <p>Welcome, <%= current_user.fname %></p>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+  </div>
+  <div class="profilebox col-md-offset-2 col-md-4">
+    <h1>New Ticket</h1>
+    <%= render 'form', ticket: @ticket %>
+  </div>
+<% else %>
+  <%= render file: "devise/sessions/new" %>
+<% end %>
 </div>
