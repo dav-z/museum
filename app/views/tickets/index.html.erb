@@ -19,7 +19,7 @@
         <td><%= ticket.date %></td>
         <td><%= ticket.price %></td>
         <td><%= ticket.quantity %></td>
-        <td><%= ticket.user %></td>
+        <td><%= ticket.user.full_name %></td>
         <td><%= link_to 'Show', ticket %></td>
         <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
         <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
