@@ -94,6 +94,7 @@ html {
 .homelogin {
   background-color: tan;
   border: 10px outset goldenrod;
+  margin-top: 100px;
   input {
     max-width: 100%;
   }
@@ -151,4 +152,6 @@ form div {
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
   font-size: 25px;
   line-height: 30px;
+  text-align: center;
+  padding-top: 70px
 }
