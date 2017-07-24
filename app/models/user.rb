@@ -9,4 +9,6 @@ class User < ApplicationRecord
   def full_name
    "#{fname} #{lname}".strip
   end
+
+  validates :pnumber, presence: true, phone: true
 end
