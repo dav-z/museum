@@ -155,3 +155,19 @@ form div {
   text-align: center;
   padding-top: 70px
 }
+.ticketdisplay {
+  background-color: rgba(210,180,140,0.5);
+  border: 10px outset goldenrod;
+  border-radius: 15px;
+  height: 30vh;
+  max-height: 30vh;
+  overflow-y: scroll;
+}
+.ticketdiv {
+  text-align: left;
+  h2 {
+    font-size: 30px;
+  	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+  	color: goldenrod;
+  }
+}

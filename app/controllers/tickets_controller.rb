@@ -12,6 +12,11 @@ class TicketsController < ApplicationController
   def show
   end
 
+  # will show most recent purchases
+  def self.recent
+    self.order( id: :desc ).limit( num )
+  end
+
   # GET /tickets/new
   def new
     @ticket = Ticket.new
