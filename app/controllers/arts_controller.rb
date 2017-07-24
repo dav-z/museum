@@ -63,7 +63,7 @@ class ArtsController < ApplicationController
   def destroy
     @art.destroy
     respond_to do |format|
-      format.html { redirect_to arts_url, notice: 'Art was successfully destroyed.' }
+      format.html { redirect_to arts_url, notice: 'Art was successfully destroyed.', status: 303 }
       format.json { head :no_content }
     end
   end
