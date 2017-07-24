@@ -59,6 +59,7 @@ html {
           padding-left: 20px;
           color: darkred;
           a {
+            text-align: center;
             color: darkred;
           }
           a:hover {
@@ -76,7 +77,6 @@ html {
       max-width: 80%;
       margin: auto;
       min-height: 72vh;
-      padding-top: 45px;
       // background-color: sienna;
     }
     footer {
@@ -112,12 +112,13 @@ html {
   background-color: tan;
   border: 10px outset goldenrod;
   border-radius: 15px;
+  // margin-left: 35%;
   h3 {
     margin: 0;
   }
 }
 .artistpic {
-  margin: 1vh;
+  margin: 0vh;
 }
 .mediumstyles {
   display: inline-block;
@@ -155,10 +156,10 @@ form div {
 }
 .abouttext {
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 30px;
   text-align: center;
-  padding-top: 40px;
+  // padding-top: 40px;
 }
 .ticketdisplay, .aboutdisplay {
   background-color: rgba(210,180,140,0.5);
@@ -166,7 +167,7 @@ form div {
   border-radius: 15px;
   height: 30vh;
   max-height: 30vh;
-  margin-top: 100px;
+  // margin-top: 100px;
   overflow-y: scroll;
 }
 .ticketdiv {
