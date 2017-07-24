@@ -1,3 +1,4 @@
+<% if user_signed_in? && current_user.admin? %>
 <p id="notice"><%= notice %></p>
 
 <h1>Arts</h1>
@@ -37,3 +38,34 @@
 <br>
 
 <%= link_to 'New Art', new_art_path %>
+<% elsif user_signed_in? %>
+
+<div class="col-md-2 homelogin">
+    <p>Welcome, <%= current_user.fname %></p>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+</div>
+
+<div class="col-md-7 col-md-offset-1 ticketdisplay">
+  <div class="galdiv">
+    <% @arts.each do |art| %>
+      <div class="galimg">
+        <a href="/arts/<%= art.id %>"><%= image_tag art.avatar.url %></a>
+          </div>
+    <% end %>
+  </div>
+</div>
+<% else %>
+<div class="col-md-2 homelogin">
+    <%= render file: "devise/sessions/new" %>
+</div>
+
+<div class="col-md-7 col-md-offset-1 ticketdisplay">
+  <div class="galdiv">
+    <% @artists.each do |artist| %>
+      <div class="galimg">
+        <a href="/artists/<%= artist.id %>"><%= image_tag artist.avatar.url %></a>
+          </div>
+    <% end %>
+  </div>
+</div>
+<% end %>
