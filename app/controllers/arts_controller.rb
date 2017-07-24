@@ -30,6 +30,9 @@ class ArtsController < ApplicationController
   # POST /arts.json
   def create
     @art = Art.new(art_params)
+    if params[:art][:medium_ids]
+      @art.media = Medium.where( id: params[:art][:medium_ids] )
+    end
     # assigns a last edited by field for each artwork
     @art.user_id = current_user.id
     respond_to do |format|
