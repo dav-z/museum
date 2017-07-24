@@ -1,3 +1,4 @@
+<% if user_signed_in? && current_user.admin? %>
 <div class="col-md-8 profilebox">
 
   <h1>New Location</h1>
@@ -6,3 +7,5 @@
 
   <%= link_to 'Back', locations_path %>
 </div>
+<% else %>
+<% end %>

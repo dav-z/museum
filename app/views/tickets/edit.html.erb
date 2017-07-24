@@ -1,6 +1,9 @@
+<% if user_signed_in? && current_user.admin? %>
 <h1>Editing Ticket</h1>
 
 <%= render 'form', ticket: @ticket %>
 
 <%= link_to 'Show', @ticket %> |
 <%= link_to 'Back', tickets_path %>
+<% else %>
+<% end %>
