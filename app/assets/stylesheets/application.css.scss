@@ -50,7 +50,7 @@ html {
     nav {
       background-color: sienna;
       text-align: right;
-      min-height: 5vh;
+      min-height: 3vh;
       ul {
         list-style: none;
         max-width: 80%;
@@ -75,8 +75,7 @@ html {
     .yieldbody {
       max-width: 80%;
       margin: auto;
-      min-height: 72vh;
-      padding-top: 45px;
+      min-height: 74vh;
       // background-color: sienna;
     }
     footer {
@@ -95,7 +94,7 @@ html {
 .homelogin {
   background-color: tan;
   border: 10px outset goldenrod;
-  margin-top: 60px;
+  margin-top: 80px;
   input {
     max-width: 100%;
   }
@@ -112,6 +111,7 @@ html {
   background-color: tan;
   border: 10px outset goldenrod;
   border-radius: 15px;
+  min-height: 5vh;
   h3 {
     margin: 0;
   }
@@ -137,8 +137,12 @@ html {
 form div {
   margin: 5px;
 }
+.carouseltext {
+  margin: 10px;
+}
 #cara1, #cara2, #cara3 {
   font-size: 20px;
+  margin: 10px;
 }
 #cara1:hover, #cara2:hover, #cara3:hover {
   color: firebrick;
@@ -154,9 +158,9 @@ form div {
   font-size: 25px;
   line-height: 30px;
   text-align: center;
-  padding-top: 70px
+  padding-top: 40px;
 }
-.ticketdisplay {
+.ticketdisplay, .aboutdisplay {
   background-color: rgba(210,180,140,0.5);
   border: 10px outset goldenrod;
   border-radius: 15px;
@@ -172,4 +176,28 @@ form div {
   	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
   	color: goldenrod;
   }
+}
+th {
+	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+	padding: 11px;
+}
+td {
+	font-size: 15px;
+  padding: 5px 11px;
+}
+a {
+  color: darkred;
+}
+a:hover {
+  text-decoration: none;
+  color: goldenrod;
+}
+#error_explanation {
+  h2 {
+    display: none;
+  }
+  li {
+    font-size: 10px;
+  }
+
 }
